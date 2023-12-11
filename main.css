@@ -45,20 +45,19 @@ html {
 
 /* Text Styles */
 
+header *, .hero * { color: var(--fg); }
+
+nav a, .hero p { color: var(--secondary); }
+
 nav a, .hero p, button {
     text-decoration: none;
-    color: var(--fg);
     font-size: var(--text1);
 }
 
-.logo {
-    font: 900 var(--text2) var(--font);
-    color: var(--fg);
-}
+.logo { font: 900 var(--text2) var(--font); }
 
 .hero h1 {
     font: 900 var(--text4) var(--font);
-    color: var(--fg);
     line-height: 0.9;
 }
 
@@ -68,6 +67,8 @@ button {
     background-color: var(--primary);
     border: none; border-radius: var(--pad-sm);
 }
+
+.features h2 { font: 900 var(--text3) var(--font); }
 
 /* Page Layout */
 
@@ -82,6 +83,19 @@ nav a { margin-right: var(--pad-sm); }
 
 .hero { align-items: center; }
 
-.hero h1, .hero p { margin-bottom: var(--pad-md); }
+.hero h1, .hero p, .features h2 { margin-bottom: var(--pad-md); }
+
+.features {
+    background-color: var(--fg);
+    padding: var(--pad-lg);
+    text-align: center;
+}
+
+.cards { 
+    margin-bottom: var(--pad-lg); 
+    justify-content: space-between;
+}
+
+.cards div { flex-basis: 200px; }
 
 /* Misc */
