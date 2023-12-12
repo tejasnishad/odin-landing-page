@@ -45,7 +45,7 @@ html {
 
 /* Text Styles */
 
-header *, .hero * { color: var(--fg); }
+header *, .hero *, button, footer { color: var(--fg); }
 
 nav a, .hero p { color: var(--secondary); }
 
@@ -54,7 +54,9 @@ nav a, .hero p, button {
     font-size: var(--text1);
 }
 
-.logo { font: 900 var(--text2) var(--font); }
+.logo, .author { font: 900 var(--text2) var(--font); }
+
+.quote { font: italic 300 var(--text2) var(--font); }
 
 .hero h1 {
     font: 900 var(--text4) var(--font);
@@ -68,11 +70,18 @@ button {
     border: none; border-radius: var(--pad-sm);
 }
 
+button.secondary {
+    border: 2px solid var(--fg);
+    background: none;
+}
+
 .features h2 { font: 900 var(--text3) var(--font); }
+
+section { color: var(--bg); }
 
 /* Page Layout */
 
-section, header { margin-bottom: var(--pad-md); }
+section, footer { padding: var(--pad-lg) 0; }
 
 header {
     justify-content: space-between;
@@ -85,17 +94,34 @@ nav a { margin-right: var(--pad-sm); }
 
 .hero h1, .hero p, .features h2 { margin-bottom: var(--pad-md); }
 
-.features {
-    background-color: var(--fg);
-    padding: var(--pad-lg);
-    text-align: center;
-}
+.features, .cta { background-color: var(--fg); }
 
-.cards { 
-    margin-bottom: var(--pad-lg); 
-    justify-content: space-between;
-}
+.features { text-align: center; }
+
+.cards { justify-content: space-between; }
 
 .cards div { flex-basis: 200px; }
 
+.review .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pad-md);
+    align-items: flex-end;
+}
+
+.cta-box {
+    padding: var(--pad-lg);
+    background-color: var(--primary);
+    color: var(--fg);
+    border-radius: var(--pad-sm);
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer { text-align: center; }
+
 /* Misc */
+
+.review { 
+    background-color: var(--secondary);
+}
